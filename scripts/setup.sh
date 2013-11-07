@@ -1,9 +1,8 @@
 #!/bin/bash
 
 # Update all packages.
-sudo apt-get install python-software-properties
-sudo add-apt-repository -y ppa:chris-lea/node.js
 sudo apt-get update
+sudo apt-get install -y python-software-properties
 sudo apt-get -y upgrade
 
 # install the backported kernel

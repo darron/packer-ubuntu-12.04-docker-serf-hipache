@@ -1,4 +1,6 @@
 #!/bin/bash
+sudo add-apt-repository -y ppa:chris-lea/node.js
+sudo apt-get update
 sudo apt-get -y install nodejs redis-server
 sudo npm install https://github.com/darron/hipache/archive/0.2.4.tar.gz -g
 sudo mkdir /etc/hipache

@@ -6,10 +6,10 @@ VAGRANTFILE_API_VERSION = "2"
  
 Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   config.vm.define :serf do |config|
-    config.vm.box = "precise64"
-    config.vm.box_url = "http://cloud-images.ubuntu.com/vagrant/precise/current/precise-server-cloudimg-amd64-vagrant-disk1.box"
- 
-    config.vm.provision "shell", path: "scripts/setup.sh"
+    config.vm.box = "precise64-3.8"
+    config.vm.box_url = "https://dl.dropboxusercontent.com/u/695019/vagrant/precise64-3.8.box"
+
+    # Proper kernel setup from setup.sh has already been done with that VM.
     config.vm.provision "shell", path: "scripts/docker.sh"
     config.vm.provision "shell", path: "scripts/serf.sh"
     config.vm.provision "shell", path: "scripts/hipache.sh"
