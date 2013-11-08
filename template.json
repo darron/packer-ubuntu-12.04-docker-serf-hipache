@@ -21,7 +21,8 @@
                 "scripts/setup.sh",
                 "scripts/docker.sh",
                 "scripts/serf.sh",
-                "scripts/hipache.sh"
+                "scripts/hipache.sh",
+                "scripts/gitreceive.sh"
             ]
     }],
 
