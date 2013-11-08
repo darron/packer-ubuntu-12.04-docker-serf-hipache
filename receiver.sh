@@ -19,6 +19,14 @@ PORT=$(sudo docker port $ID 5000 | sed 's/0.0.0.0://')
 /usr/bin/redis-cli rpush frontend:$BASE.handbill.io $BASE
 /usr/bin/redis-cli rpush frontend:$BASE.handbill.io http://127.0.0.1:$PORT
 
+# Remove the old port.
+if [ -n "OLD_PORT" ]
+then
+  echo "Removing $OLD_PORT for $BASE."
+else
+  echo "Not removing any port."
+fi
+
 # Kill the old container by ID.
 if [ -n "$OLD_ID" ]
 then
@@ -28,10 +36,3 @@ else
   echo "Not killing anything."
 fi
 
-# Remove the old port.
-if [ -n "OLD_PORT" ]
-then
-  echo "Removing $OLD_PORT for $BASE."
-else
-  echo "Not removing any port."
-fi
