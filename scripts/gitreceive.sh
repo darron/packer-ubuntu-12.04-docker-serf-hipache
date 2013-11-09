@@ -9,7 +9,7 @@ sudo echo "git ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/80-git
 cd /home/git/
 sudo mv receiver receiver-dist
 sudo wget https://raw.github.com/darron/packer-ubuntu-12.04-docker-serf-hipache/master/receiver.sh
-sudo mv -v receiver.sh receiver
+sudo mv -f receiver.sh receiver
 sudo chmod 755 receiver
 
 echo "Do this now: "
