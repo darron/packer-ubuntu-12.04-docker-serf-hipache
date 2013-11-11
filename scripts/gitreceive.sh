@@ -5,11 +5,11 @@ cd /usr/bin/
 sudo wget https://raw.github.com/progrium/gitreceive/master/gitreceive
 sudo chmod +x gitreceive 
 sudo gitreceive init
-sudo echo "git ALL=(ALL) NOPASSWD:ALL" > /etc/sudoers.d/80-git
+sudo sh -c "echo 'git ALL=(ALL) NOPASSWD:ALL' > /etc/sudoers.d/80-git"
+sudo chmod 440 /etc/sudoers.d/80-git
 cd /home/git/
 sudo mv receiver receiver-dist
-sudo wget https://raw.github.com/darron/packer-ubuntu-12.04-docker-serf-hipache/master/receiver.sh
-sudo mv -f receiver.sh receiver
+sudo wget -O receiver https://raw.github.com/darron/packer-ubuntu-12.04-docker-serf-hipache/master/receiver.sh
 sudo chmod 755 receiver
 
 echo "Do this now: "
