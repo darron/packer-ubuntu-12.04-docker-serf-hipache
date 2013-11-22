@@ -1,6 +1,9 @@
 packer-ubuntu-12.04-docker-serf-hipache
 ===========================
 
+Obsoleted by [octohost](https://github.com/octohost/octohost).
+===========================
+
 A simple [Packer](http://www.packer.io/) template to build:
 
   1. An AMI using Ubuntu 12.04 in AWS USW-2 (Oregon) region.
